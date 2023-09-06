@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aprende sobre compiladores </title>
+    <link rel="shortcut icon" href="./images/icono-epn.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+
+   <meta name="theme-color" content="#2091F9">
+
+    <meta name="title" content="Aprende acerca de compiladores y como funcionan desde cero ">
+</head>
+
+<body>
+    
+
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title"> Pixel Compilers </h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="./index.html" class="nav__links">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Acerca de</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Contacto</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Blog</a>
+                </li>
+
+                <img src="./images/close.svg" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="./images/menu.svg" class="nav__img">
+            </div>
+        </nav>
+
+        <section class="hero__container container">
+            <h1 class="hero__title"> Pixel Compilers </h1>
+            <p class="hero__paragraph"> Se abordarán diversos aspectos relacionados con un compilador, abarcando temas como su funcionamiento y las diversas partes que lo componen. </p>
+            <a href="#" class="cta">INFORMACIÓN</a>
+        </section>
+    </header>
+
+    <main>
+        <section class="container about">
+            <h2 class="subtitle">¿Sabes las diferencias entre un  compilador y un interprete ?</h2>
+            <p class="about__paragraph" style="text-align: left;">
+                Un programa que ha sido compilado puede ejecutarse solo, pues en el proceso de compilación lo transformó en otro lenguaje (lenguaje máquina).<br>
+                Un intérprete traduce el programa cuando lo lee, convirtiendo el código del programa directamente en acciones.<br>
+                La ventaja del compilador es que dado cualquier programa se puede compilar en cualquier plataforma (sistema operativo), en cambio el archivo generado por el intérprete solo funciona en la plataforma en donde se lo ha creado.<br>
+                Un archivo compilado puede ser distribuido fácilmente conociendo la plataforma, mientras que un archivo interpretado no funciona si no se tiene el intérprete.<br>
+                Hablando de la velocidad de ejecución, un archivo compilado es de 10 a 20 veces más rápido que un archivo interpretado.<br>
+            </p>
+
+            <div class="about__main">
+                <article class="about__icons">
+                    <img src="./images/bx-question-mark.svg" class="about__icon">
+                    <h3 class="about__title"> Interprete  </h3>
+                    <p class="about__paragrah" style="text-align: left;"> Es un traductor que recibe como entrada un programa fuente , lo traduce y lo ejecuta . Un intérprete traduce una onstrucción en códido fuente , a la vez
+                    . Los porgramas interpretados generalmente son más lentos en ejecución que los programas compilados.</p>
+                </article>
+
+                <article class="about__icons">
+                    <img src="./images/web.png" class="about__icon">
+                    <h3 class="about__title">Compilador </h3>
+                    <p class="about__paragrah" style="text-align: left;"> Un compilador traduce un porgrama fuente escrito en lenguaje de alto nivel al lenguaje de máquina de la computadora. El programa traducido a lenguaje de máquina es almacenado como código objeto  </p>
+                </article>
+
+                <article class="about__icons">
+                    <img src="./images/traduccion.png" class="about__icon">
+                    <h3 class="about__title"> Traductor</h3>
+                    <p class="about__paragrah" style="text-align: left;"> Programa que toma como entrada un texto escrito
+                        (llamado fuente) y da como salida otro texto (llamado objeto)</p>
+                </article>
+            </div>
+        </section>
+
+
+        <section class="knowledge">
+            <div class="knowledge__container container">
+                <div class="knowledge__texts">
+                    <h2 class="subtitle">Una Breve Historia del Primer Compilador</h2>
+                    <p class="knowledge__paragraph">En los albores de la informática, la creación de software estaba restringida
+                        por la necesidad de programar en lenguaje ensamblador específico para cada máquina. Esto resultó en
+                        un proceso lento y propenso a errores. Fue entonces cuando en 1952, Grace Hopper, una pionera en la
+                        programación, concibió el primer compilador, conocido como A-0 System.</p>
+                    <p class="knowledge__paragraph">El A-0 System permitió a los programadores escribir código en un lenguaje de
+                        programación más accesible, el lenguaje de ensamblador extendido (Extended Assembly Language), que
+                        luego se traducía al código de máquina por el compilador. Esto marcó un hito fundamental en la
+                        programación, allanando el camino para la creación de lenguajes de alto nivel y revolucionando la forma
+                        en que se desarrolla el software.</p>
+                    <a href="index2.html" class="cta">Explora más sobre la historia de la programación</a>
+                </div>
+
+                <figure class="knowledge__picture">
+                    <img src="./images/descarga.jpeg" class="knowledge__img">
+                </figure>
+            </div>
+        </section>
+
+        <section class="questions container1">
+            <h2 class="subtitle">ESTRUCTURA DEL COMPILADOR</h2>
+        </section >
+        <section class="testimony">
+
+            <div class="testimony__container container">
+
+                <img src="./images/leftarrow.svg" class="testimony__arrow" id="before">
+
+                <section class="testimony__body testimony__body--show" data-id="1">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle"> 1. Análisis léxico </h2>
+                        <p class="testimony__review">Identifica las palabras individuales en el código fuente y las clasifica en "tokens" (unidades léxicas), como identificadores, números y operadores.
+                        </p>
+                        <br>
+                        <a href="index3.html#AnalisisL" class="custom-button">Ver más</a>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="./images/imagenEjemplo.jpg" class="testimony__img">
+                    </figure>
+                </section>
+
+                <section class="testimony__body" data-id="2">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle"> 2. Parsing </h2>
+                        <p class="testimony__review">Examina la estructura gramatical del código fuente para determinar si sigue las reglas sintácticas del lenguaje de programación.
+                            Genera un árbol de análisis sintáctico que representa la jerarquía de las expresiones y las instruccione</p>
+                        <br>
+                        <a href="index3.html#Parser" class="custom-button">Ver más</a>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="./images/imagen%20parsing.png" class="testimony__img">
+                    </figure>
+                </section>
+
+                <section class="testimony__body" data-id="3">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle"> 3. Semantic Analysis </h2>
+                        <p class="testimony__review">Comprueba el significado y la coherencia del código más allá de la gramática. Asegura que las instrucciones tengan sentido y cumplan con las reglas semánticas del lenguaje</p>
+                        <br>
+                        <a href="index3.html#Semantica" class="custom-button">Ver más</a>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="./images/visto.png" class="testimony__img">
+                    </figure>
+                </section>
+
+                <section class="testimony__body" data-id="4">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle"> 4. Optimization </h2>
+                        <p class="testimony__review">Realiza mejoras en el código intermedio generado por el compilador para lograr
+                            una mayor eficiencia en términos de tiempo de ejecución o uso de recursos.</p>
+                        <br>
+                        <a href="index3.html#Optimizacion" class="custom-button">Ver más</a>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="./images/optimizacion.png" class="testimony__img">
+                    </figure>
+                </section>
+
+
+                <section class="testimony__body" data-id="5">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle"> 5. Code Generation </h2>
+                        <p class="testimony__review"> Convierte el código fuente y la representación interna en código de máquina o en un lenguaje intermedio que puede ser ejecutado por una máquina.</p>
+                      <br>
+                        <a href="index3.html#GeneracionCode" class="custom-button">Ver más</a>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="./images/process_5034859.png" class="testimony__img">
+                    </figure>
+                </section>
+
+
+
+
+
+
+
+                <img src="./images/rightarrow.svg" class="testimony__arrow" id="next">
+            </div>
+        </section>
+
+        <section class="questions container">
+            <h2 class="subtitle">Preguntas frecuentes</h2>
+            <section class="questions__container">
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">¿Qué es CSS?
+                            <span class="questions__arrow">
+                                <img src="./images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <p class="questions__show">CSS (Cascading Style Sheets) es un lenguaje de diseño utilizado para 
+                            describir la presentación y el estilo de un documento HTML. Permite controlar la apariencia de 
+                            los elementos en una página web, como el color, la fuente, el tamaño y la disposición de los 
+                            elementos. CSS se utiliza para separar el contenido de un documento HTML de su presentación, 
+                            lo que facilita la creación de sitios web con un diseño coherente y profesional. Con CSS, los 
+                            desarrolladores pueden crear estilos reutilizables y aplicarlos a múltiples páginas, lo que 
+                            ahorra tiempo y esfuerzo en el desarrollo web.</p>
+                    </div>
+                </article>
+
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">¿Qué es C?
+                            <span class="questions__arrow">
+                                <img src="./images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+                        <p class="questions__show">El lenguaje de programación C es un lenguaje de programación de alto nivel y propósito general que se utiliza ampliamente en el desarrollo de software. Fue creado en la década de 1970 por Dennis Ritchie en los laboratorios Bell. C se caracteriza por su eficiencia y su capacidad para acceder directamente a la memoria del sistema, lo que lo hace adecuado para el desarrollo de sistemas operativos y aplicaciones de bajo nivel. Además, C es un lenguaje estructurado que permite la modularidad y reutilización de código, lo que lo convierte en una opción popular para el desarrollo de programas grandes y complejos.</p>
+                    </div>
+                </article>
+
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">¿Qué son Autómatas Finitos Determinísticos?
+                            <span class="questions__arrow">
+                                <img src="./images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <p class="questions__show">Los autómatas finitos determinísticos (AFD) son modelos matemáticos utilizados en ciencias de la computación y teoría de autómatas. Son máquinas abstractas que pueden aceptar o rechazar cadenas de símbolos de un lenguaje, siguiendo un conjunto de reglas predefinidas. Un AFD consta de un conjunto finito de estados, una entrada de símbolos, una función de transición que define cómo cambia de estado en respuesta a los símbolos de entrada y un conjunto de estados de aceptación. Cuando se le proporciona una cadena de entrada, el AFD comienza en un estado inicial y sigue las transiciones de estado hasta que alcanza un estado de aceptación o rechazo. Los AFD son utilizados en la implementación de compiladores, reconocimiento de patrones, análisis léxico y otras aplicaciones relacionadas con el procesamiento de lenguajes formales.</p>
+                    </div>
+                </article>
+            </section>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        
+
+        <section class="footer__copy container">
+            <div class="footer__social">
+                <a href="#" class="footer__icons"><img src="./images/facebook.svg" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="./images/twitter.svg" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="./images/youtube.svg" class="footer__img"></a>
+            </div>
+
+            <h3 class="footer__copyright">Derechos reservados &copy; Gaibor - Guano - Lema</h3>
+        </section>
+    </footer>
+
+    <script src="./js/slider.js"></script>
+    <script src="./js/questions.js"></script>
+    <script src="./js/menu.js"></script>
+</body>
+
